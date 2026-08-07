@@ -1,7 +1,6 @@
 # InterviewAce AI 🚀
 > **Your Personal AI Interview Preparation Assistant**
 
-![InterviewAce AI](/frontend/public/favicon.svg)
 
 InterviewAce AI is a modern, responsive, dark-themed AI-powered interview preparation web application. Built with ReactJS, Tailwind CSS, Framer Motion, Recharts, Express.js, and Web Speech API.
 
