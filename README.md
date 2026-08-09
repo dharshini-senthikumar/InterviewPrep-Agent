@@ -1,9 +1,45 @@
 # InterviewAce AI 🚀
-> **Your Personal AI Interview Preparation Assistant**
+> **Your Personal AI Interview Preparation Assistant** (`InterviewPerep-Agent`)
 
-![InterviewAce AI](/frontend/public/favicon.svg)
+---
 
-InterviewAce AI is a modern, responsive, dark-themed AI-powered interview preparation web application. Built with ReactJS, Tailwind CSS, Framer Motion, Recharts, Express.js, and Web Speech API.
+## 🏛️ System Architecture
+
+```mermaid
+graph TD
+    subgraph Client ["Frontend Layer (React 18 + Vite)"]
+        UI["Glassmorphic Dark UI (Tailwind CSS + Framer Motion)"]
+        Voice["Web Speech API (Voice Recognition & Synthesis)"]
+        ResumeUpload["Resume Parser & ATS Analyzer"]
+        CodingStudio["Coding Compiler Studio (Java, Python, C++, JS)"]
+        Charts["Recharts Analytics & Telemetry"]
+    end
+
+    subgraph Backend ["Backend API Layer (Node.js + Express)"]
+        Server["Express.js Server"]
+        ResumeRoutes["/api/resume Routes"]
+        InterviewRoutes["/api/interview Routes"]
+        CodingRoutes["/api/coding Routes"]
+        CompanyRoutes["/api/company Routes"]
+        AnalyticsRoutes["/api/analytics Routes"]
+    end
+
+    subgraph CoreEngine ["AI & Database Services"]
+        AIService["AI Dynamic HR Agent & Adaptive Evaluation"]
+        PDFService["jsPDF Report & Certificate Generator"]
+        DB["MongoDB Models (User, Resume, Interview, Feedback)"]
+    end
+
+    UI --> Server
+    Voice --> AIService
+    ResumeUpload --> ResumeRoutes
+    CodingStudio --> CodingRoutes
+    Charts --> AnalyticsRoutes
+
+    Server --> AIService
+    Server --> DB
+    AIService --> PDFService
+```
 
 ---
 
@@ -32,8 +68,8 @@ InterviewAce AI is a modern, responsive, dark-themed AI-powered interview prepar
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/interviewace-ai.git
-cd interviewace-ai
+git clone https://github.com/YOUR_USERNAME/InterviewPerep-Agent.git
+cd InterviewPerep-Agent
 ```
 
 ### 2. Install & Run Backend Server
